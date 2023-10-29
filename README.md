@@ -1,4 +1,4 @@
-Visit Our website on [https://navriseupindiacare.org/](url)
+Visit Our website on [https://navriseupindiacare.org/](https://navriseupindiacare.org/)
 
 At NavRiseup, we're on a mission to empower communities and transform lives across India.
 

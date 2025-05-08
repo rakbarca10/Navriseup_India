@@ -1,0 +1,114 @@
+/* Ongoing Causes Section */
+.ongoing-causes {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Grid Layout for Cards */
+.oc-allcards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    height: fit-content;
+}
+
+/* Card Styles */
+.oc-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative; /* For positioning the donate button */
+    max-height: 400px;
+}
+
+.oc-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.oc-img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Content inside cards */
+.oc-content {
+    padding: 20px;
+    position: relative;
+    z-index: 1; /* Keep the content on top of the dimmed background */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.oc-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.oc-details {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Hide Raised Money Text on Hover */
+.oc-num {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.oc-card:hover .oc-num {
+    opacity: 0; /* Hide the raised money text on hover */
+}
+
+/* Donation Button hidden initially */
+.donate-form {
+    position: absolute;
+    bottom: 50%;
+    left: 5%;
+    width: 90%;
+    opacity: 0;
+    z-index: 2; /* Appear on top of the content */
+    transition: opacity 0.3s ease-in-out, bottom 0.3s ease-in-out;
+}
+
+.oc-card:hover .donate-form {
+    opacity: 1; /* Show button on hover */
+    bottom: 20px; /* Slide the button up */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    .oc-allcards {
+        grid-template-columns: 1fr; /* One column for smaller screens */
+    }
+
+    .oc-content {
+        padding: 15px;
+    }
+}
+@media (max-width: 1300px) {
+    .oc-card {
+        max-height: 500px; /* Increase height to fit the button */
+    }
+}
+

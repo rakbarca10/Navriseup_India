@@ -1,0 +1,25 @@
+div[id^="i-widget-container-"] {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  div[id^="i-widget-container-"] .form-item input {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+  }
+
+  div[id^="i-widget-container-"] .form-item button {
+    background-color: #4c9daf;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    div[id^="i-widget-container-"] {
+        background-color: #e0e0e0;
+        padding: 15px;
+    }
+  }

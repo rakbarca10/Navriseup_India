@@ -1,0 +1,196 @@
+.why-donate-sect {
+    position: relative;
+    padding-bottom: 20px;
+    min-height: fit-content;
+    height: 110vh;
+    background: url('images/hero_3.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.why-donate-sect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.199);
+    z-index: 1;
+}
+
+.donate-heading {
+    position: relative;
+    z-index: 2;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+#dheading {
+    color: #f9f9f9;
+}
+
+.donate-details {
+    position: relative;
+    z-index: 2;
+    max-width: 902px;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.758);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.donate-details p {
+    color: #f1f1f1; /* Slightly off-white */
+}
+
+/* Grid layout for 2x2 cards */
+.donate-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.donate-div {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    text-align: left;
+}
+
+.donate-div .number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700; /* Golden color for numbers */
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+.donate-div h4 {
+    font-size: 1.2rem;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.donate-div p {
+    font-size: 1.05rem;
+    color: #eaeaea;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .donate-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .donate-heading {
+        font-size: 2rem;
+    }
+
+    .donate-div h4 {
+        font-size: 1rem;
+    }
+
+    .donate-div p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-height: 650px) {
+    .why-donate-sect {
+        background-attachment: scroll; /* Prevent fixed background issues */
+        min-height: 110vh; /* Let content height be dynamic */
+    }
+
+    /* Decrease padding and font size for smaller heights */
+    .donate-details {
+        padding: 10px;
+        max-width: 1000px;
+    }
+
+    .donate-heading {
+        font-size: 1.5rem; /* Reduce heading size */
+    }
+
+    .donate-grid {
+        gap: 10px; /* Reduce gap between boxes */
+    }
+
+    .donate-div {
+        padding: 10px; /* Reduce box padding */
+
+    }
+
+    .donate-div h4 {
+        font-size: 0.9rem; /* Reduce heading size in donate box */
+    }
+
+    .donate-div p {
+        font-size: 0.85rem; /* Reduce paragraph text size */
+    }
+
+    .donate-div .number {
+        font-size: 1rem; /* Reduce number size */
+        padding: 3px 7px; /* Reduce padding of number circle */
+    }
+}
+
+@media (max-width: 768px) {
+    .donate-grid {
+        grid-template-columns: repeat(1, 1fr); /* Stack boxes vertically */
+    }
+
+    .donate-heading {
+        font-size: 1.8rem;
+    }
+
+    .donate-div h4 {
+        font-size: 1rem;
+    }
+
+    .donate-div p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .donate-heading {
+        font-size: 1.5rem;
+    }
+
+    .donate-div h4 {
+        font-size: 0.9rem;
+    }
+
+    .donate-div p {
+        font-size: 0.8rem;
+    }
+
+    .donate-div .number {
+        font-size: 1rem; /* Further reduce number size */
+        padding: 3px 7px;
+    }
+}

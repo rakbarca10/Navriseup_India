@@ -1,0 +1,84 @@
+.missions-visions {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.heading {
+    margin-top: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 3rem; 
+    margin-bottom: 30px; 
+    color: #262626; 
+    text-align: center;
+    width: 100%;
+}
+
+.outer-mv {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.mv-card {
+    margin: 15px;
+    height: 320px; 
+    border: 2px solid #b8b8b8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.108); 
+    overflow: hidden;
+    display: flex;
+}
+
+.vision {
+    flex-direction: row-reverse; 
+}
+
+.mv-img {
+    width: 40%;
+    height: 100%; 
+    object-fit: cover; 
+}
+.mv-content {
+    padding: 20px;
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+}
+
+.mv-subheading {
+    font-size: 1.5rem; 
+    color: #494949; 
+    margin-bottom: 10px;
+}
+
+.mv-details {
+    font-size: 1.05rem;
+    color: #363636; 
+    line-height: 1.6; /* Improved readability */
+}
+
+@media (max-width: 768px) {
+    .mv-card {
+        flex-direction: column;
+        width: 100%; /* Full width for smaller screens */
+        height: auto; /* Reset height for smaller screens */
+    }
+
+    .mv-img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .mv-content {
+        padding: 15px; 
+    }
+
+    .heading {
+        font-size: 2rem; /* Responsive font size */
+    }
+}

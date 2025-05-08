@@ -1,0 +1,33 @@
+.banner-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #d6ffd6;
+    padding: 10px 0;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+.banner-content {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 35s linear infinite;
+}
+
+.banner-item {
+    white-space: nowrap;
+    padding: 0 50px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Infinite scroll animation */
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

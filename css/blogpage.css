@@ -1,0 +1,232 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Blog */
+.blog-sect {
+    margin: auto;
+    width: 90vw;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-outerbox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.blog-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #cdcdcd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05); /* Soft shadow */
+}
+
+.blog-date {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+.date {
+    font-size: 2rem;
+    color: #333;
+}
+
+.month {
+    font-size: 1rem;
+    color: #888;
+}
+
+.image-div {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.blog-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.blog-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.writer, .domain {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+}
+
+.domain {
+    margin-top: 5px;
+    color: #555;
+    background-color: #e4e4e4;
+    padding: 3px 8px;
+    border-radius: 5px;
+    width: max-content;
+    font-size: 0.8rem;
+}
+
+.blog-info {
+    margin: 12px 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+hr {
+    width: 90%;
+    margin: 10px auto;
+    border: none;
+    border-top: 1px solid #d0d0d0;
+}
+
+.readmore {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.readmore:hover {
+    color: #0056b3;
+}
+
+/* Responsive design */
+
+@media (max-width: 933px) {
+    .domain{
+        text-align: center;
+    }
+    .blog-outerbox {
+        grid-template-columns: 1fr; /* Stack cards in one column on mobile */
+    }
+
+    .blog-card {
+        flex-direction: column; /* Stack content in blog card vertically */
+        text-align: center; /* Center the content for smaller screens */
+    }
+
+    .blog-date, .image-div {
+        padding: 0;
+        margin-bottom: 15px;
+    }
+
+    .image-div {
+        width: 100%;
+        height: auto;
+    }
+
+    .blog-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .blog-details {
+        width: 100%;
+    }
+
+    hr {
+        width: 80%;
+    }
+}
+
+/* scroll to top button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000; /* Ensure the button is above other elements */
+    overflow: hidden; /* Prevent overflow from causing extra space */
+}
+
+.scroll-btn {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%; /* Makes the button circular */
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.scroll-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.scroll-btn i {
+    font-size: 16px;
+}
+
+/* Responsive Scroll Button for smaller screens */
+@media (max-width: 400px) {
+    .scroll-to-top {
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .scroll-btn {
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    .scroll-btn i {
+        font-size: 14px;
+    }
+}
+
+/* Whatsapp widget responsiveness */
+.elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 999;
+    max-width: 100%; /* Ensure widget doesn't exceed screen width */
+    overflow: hidden; /* Prevent any overflow */
+}
+
+/* Responsive adjustment for WhatsApp widget */
+@media (max-width: 400px) {
+    .elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
+        bottom: 50px;
+        right: 15px;
+        max-width: 95%; /* Adjust for smaller screens */
+    }
+}
+
+/* Prevent horizontal overflow caused by any elements */
+body {
+    overflow-x: hidden; /* Disable horizontal scrolling to fix extra space */
+}

@@ -1,0 +1,237 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+/* Causes section */
+.causes-sect {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.heading {
+    font-weight: bold;
+    color: #2c3e50; 
+    font-size: 2.5rem; 
+    line-height: 2.7rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#upper-sect {
+    margin-bottom: 34px;
+}
+
+.causes-para {
+    font-size: 1.2rem; 
+    line-height: 1.8; 
+    width: 50vw;
+    max-width: 800px;
+    color: #4d4d4d; 
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Featured Causes Section */
+.featured-causes-div {
+    padding: 20px;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-content: center;
+}
+
+/* Cause Box Styling */
+.cause-box {
+    border: 1px solid rgba(71, 71, 71, 0.408);
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Image Styling */
+.cause-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background-color: #76c7c0;
+    border-radius: 5px;
+}
+
+/* Headings */
+h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Amount Raised Paragraph */
+.cause-box p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .featured-causes-div {
+        grid-template-columns: 1fr;
+        width: 90vw;
+    }
+
+    .cause-box {
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    .causes-para {
+        width: 90vw;
+        font-size: 1rem;
+    }
+
+    .cause-box h3 {
+        font-size: 1.3rem;
+    }
+
+    .cause-box p {
+        font-size: 0.9rem;
+    }
+
+    .donate-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+/* For Extra Small Devices */
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+
+    .causes-para {
+        width: 95vw;
+        font-size: 0.9rem;
+    }
+
+    .cause-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .cause-box p {
+        font-size: 0.8rem;
+    }
+
+    .donate-btn {
+        font-size: 0.8rem;
+        padding: 7px 12px;
+    }
+}
+
+/* scroll to top button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000; /* Ensure the button is above other elements */
+    overflow: hidden; /* Prevent overflow from causing extra space */
+}
+
+.scroll-btn {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%; /* Makes the button circular */
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.scroll-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.scroll-btn i {
+    font-size: 16px;
+}
+
+/* Responsive Scroll Button for smaller screens */
+@media (max-width: 400px) {
+    .scroll-to-top {
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .scroll-btn {
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    .scroll-btn i {
+        font-size: 14px;
+    }
+}
+
+/* Whatsapp widget responsiveness */
+.elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 999;
+    max-width: 100%; /* Ensure widget doesn't exceed screen width */
+    overflow: hidden; /* Prevent any overflow */
+}
+
+/* Responsive adjustment for WhatsApp widget */
+@media (max-width: 400px) {
+    .elfsight-app-8eef5ff3-8280-4b10-a0cd-810ec58eb551 {
+        bottom: 50px;
+        right: 15px;
+        max-width: 95%; /* Adjust for smaller screens */
+    }
+}
+
+/* Prevent horizontal overflow caused by any elements */
+body {
+    overflow-x: hidden; /* Disable horizontal scrolling to fix extra space */
+}
